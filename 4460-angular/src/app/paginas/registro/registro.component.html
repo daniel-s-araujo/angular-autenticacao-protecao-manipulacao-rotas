@@ -5,50 +5,27 @@
       <img src="/assets/images/registro.png" alt="Cyber Login" />
     </div>
 
-
     <div class="direita-section">
       <h2 class="registro-title">Cadastro</h2>
       <p class="registro-description">Olá! Preencha seus dados.</p>
 
-      <form
-        [formGroup]="registroForm"
-        class="registro-form"
-      >
+      <form [formGroup]="registroForm" class="registro-form" (ngSubmit)="aoEnviar()">
         <div>
           <label>Nome</label>
-          <input
-            type="text"
-            formControlName="name"
-            placeholder="Nome completo"
-            class="registro-input"
-          />
+          <input type="text" formControlName="name" placeholder="Nome completo" class="registro-input" />
         </div>
 
         <div>
           <label>Email</label>
-          <input
-            type="email"
-            formControlName="email"
-            placeholder="Digite seu email"
-            class="registro-input"
-          />
+          <input type="email" formControlName="email" placeholder="Digite seu email" class="registro-input" />
         </div>
 
         <div>
           <label>Senha</label>
-          <input
-            type="password"
-            formControlName="password"
-            placeholder="******"
-            class="registro-input"
-          />
+          <input type="password" formControlName="password" placeholder="******" class="registro-input" />
         </div>
 
-        <button
-          type="submit"
-          [disabled]="registroForm.invalid"
-          class="registro-button"
-        >
+        <button type="submit" [disabled]="registroForm.invalid" class="registro-button">
           Cadastrar
         </button>
       </form>
