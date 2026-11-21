@@ -15,7 +15,6 @@ export class AuthService {
   }
 
   estaLogado() {
-    console.log('this.estaAutenticado()', this.estaAutenticado())
     return this.estaAutenticado();
   }
 }
