@@ -1,6 +1,6 @@
 <div class="conteudo">
   <div class="grade-postagens">
-    <a *ngFor="let postagem of postagens" class="link-postagem">
+    <a *ngFor="let postagem of postagens" class="link-postagem" (click)="vaParaOPost(postagem.id)">
       <app-cartao-postagem [postagem]="postagem"></app-cartao-postagem>
     </a>
   </div>
